@@ -1,9 +1,17 @@
+import { Types } from "ably";
+import * as Ably from "ably/promises";
+
 console.log("Oh hai! 🖤");
 
-const result = await fetch("/api/hello")
-const data = await result.json()
-console.log(data)
+const optionalClientId = "optionalClientId"; // When not provided in authUrl, a default will be used.
+const connection = new Ably.Realtime.Promise({ authUrl: `/api/ably/token-request?clientId=${optionalClientId}` });
+const channel = connection.channels.get("some-channel-name");
 
-document.getElementById("response").innerText = JSON.stringify(data);
+channel.subscribe((msg: Types.Message) => {
+    console.log("Ably message received", msg);
+    document.getElementById("response").innerHTML += "<br />" + JSON.stringify(msg);
+});
+
+channel.publish("hello-world-message", { message: "Hello world!" });
 
 export { };
