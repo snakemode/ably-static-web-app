@@ -7,7 +7,7 @@ const optionalClientId = "optionalClientId"; // When not provided in authUrl, a 
 const connection = new Ably.Realtime.Promise({ authUrl: `/api/ably/token-request?clientId=${optionalClientId}` });
 const channel = connection.channels.get("some-channel-name");
 
-channel.subscribe((msg: Types.Message) => {
+await channel.subscribe((msg: Types.Message) => {
     console.log("Ably message received", msg);
     document.getElementById("response").innerHTML += "<br />" + JSON.stringify(msg);
 });

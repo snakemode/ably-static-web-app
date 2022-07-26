@@ -23,7 +23,7 @@ Bundled tools:
 
 - Vite (vite.dev) - hot reload, bundleless dev server
 - TypeScript - language, type checking
-- Jest (and ts-jest) - test runner
+- Vitest - test runner
 - Azure Functions - bundled API / BFF support.
 - Ably - realtime, auth, messaging
 
