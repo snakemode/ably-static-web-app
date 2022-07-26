@@ -1,6 +1,6 @@
 # Ably + Azure Static Web App.
 
-A GitHub template to quickly get started with Ably, hosted on Azure Static Web Apps (+built in Azure Functions), TypeScript and Jest.
+A GitHub template to quickly get started with Ably, hosted on Azure Static Web Apps (+built in Azure Functions), TypeScript and Vitest.
 
 Contents:
 
@@ -13,7 +13,7 @@ Contents:
 
 # What is this?
 
-This is a GitHub template repository that will create you a pre-configured, v-latest experience on Azure Static Web Apps, along with a hot-reload enabled, local development experience. We've configured Jest, TypeScript, ts-jest, and a bunch of default built jobs so you can create a new respository and just get to work.
+This is a GitHub template repository that will create you a pre-configured, v-latest experience on Azure Static Web Apps, along with a hot-reload enabled, local development experience. We've configured Vitest, TypeScript, and a bunch of default built jobs so you can create a new respository and just get to work.
 
 There's a built in hot-reloading dev experience powered by Vite.js.
 
